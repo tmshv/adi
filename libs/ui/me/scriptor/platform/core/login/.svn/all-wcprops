@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/danielpolsen_projects/!svn/ver/23/AdiWars/trunk/src/me/scriptor/platform/core/login
+END
+LoginBaseView.as
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/danielpolsen_projects/!svn/ver/23/AdiWars/trunk/src/me/scriptor/platform/core/login/LoginBaseView.as
+END
+LoginView.as
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/danielpolsen_projects/!svn/ver/23/AdiWars/trunk/src/me/scriptor/platform/core/login/LoginView.as
+END
+RegistrationView.as
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/danielpolsen_projects/!svn/ver/22/AdiWars/trunk/src/me/scriptor/platform/core/login/RegistrationView.as
+END
+LoginModel.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/danielpolsen_projects/!svn/ver/22/AdiWars/trunk/src/me/scriptor/platform/core/login/LoginModel.as
+END
+LoginType.as
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/danielpolsen_projects/!svn/ver/22/AdiWars/trunk/src/me/scriptor/platform/core/login/LoginType.as
+END
+LoginController.as
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/danielpolsen_projects/!svn/ver/22/AdiWars/trunk/src/me/scriptor/platform/core/login/LoginController.as
+END

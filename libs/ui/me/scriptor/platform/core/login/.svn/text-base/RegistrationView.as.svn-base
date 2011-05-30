@@ -1,0 +1,39 @@
+package me.scriptor.platform.core.login {
+	import flash.events.Event;
+	import me.scriptor.platform.ui.window.InputWindow;
+
+	/**
+	 * @author Daniel Polsen (daniel.polsen[at]gmail.com)
+	 */
+	public class RegistrationView extends LoginBaseView {
+		public var characterName : InputWindow;
+
+		public function RegistrationView(model : LoginModel) {
+			super(model);
+		}
+
+		override public function create() : void {
+			super.create();
+			characterName.addEventListener(Event.CLOSE, onWindowDoneHanlder);
+		}
+
+		override public function get type() : String {
+			return LoginType.REGISTER;
+		}
+		
+		override protected function onModelChange() : void {
+			super.onModelChange();
+			this.characterName.css = this.model.getDataByKey("stylesheet");
+			this.characterName.title = this.model.getDataByKey("title");
+			this.characterName.input.field.text = this.model.getDataByKey("username");
+
+			this.stage.focus = this.characterName.input.field;
+			this.characterName.input.field.setSelection(this.characterName.input.field.length, this.characterName.input.field.length);
+		}
+		
+		//		--		Handlers		--
+		private function onWindowDoneHanlder(event : Event) : void {
+			dispatchEvent(new Event(Event.CHANGE));
+		}
+	}
+}

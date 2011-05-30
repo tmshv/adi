@@ -1,0 +1,72 @@
+package me.scriptor.platform.ui.panels {
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import me.scriptor.platform.interfaces.IView;
+
+	import flash.display.DisplayObject;
+	import flash.display.Sprite;
+	import flash.text.TextField;
+
+	/**
+	 * @author Daniel Polsen (daniel.polsen[at]gmail.com)
+	 */
+	public class UserInfo extends Sprite implements IView {
+		/**
+		 * уровень пользователя
+		 */
+		public var level : TextField;
+		/**
+		 * очки опыта пользователя
+		 */
+		public var expirience : TextField;
+		/**
+		 * игровой денежный счет пользователя
+		 */
+		public var money : TextField;
+		/**
+		 * маска фотографии пользователя
+		 */
+		public var masker : Sprite;
+		/**
+		 * контейнер для фотографии пользователя
+		 */
+		public var avatar : Sprite;
+		/**
+		 * @private если <code>true</code>, значит панель создана
+		 */
+		private var isCreated : Boolean;
+
+		public function UserInfo() {
+		}
+
+		public function create() : void {
+			if(!this.isCreated) {
+				this.isCreated = true;
+			}
+		}
+
+		public function dispose() : void {
+			if(this.isCreated) {
+				this.isCreated = false;
+			}
+		}
+
+		public function addPhoto(bitmapData : BitmapData) : void {
+			var bitmap : Bitmap = new Bitmap(bitmapData);
+			var scale : Number = this.masker.width / Math.min(bitmap.width, bitmap.height);
+			bitmap.smoothing = true;
+			bitmap.scaleX = bitmap.scaleY = scale;
+			bitmap.x = (this.masker.width - bitmap.width) >> 1;
+			bitmap.y = (this.masker.height - bitmap.height) >> 1;
+			this.avatar.addChild(bitmap);
+		}
+
+		public function get type() : String {
+			return PanelType.USER_INFO;
+		}
+
+		public function get instance() : DisplayObject {
+			return this;
+		}
+	}
+}

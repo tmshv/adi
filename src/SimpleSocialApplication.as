@@ -2,11 +2,11 @@ package{
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	import remote.RemoteRequest;
+	import ru.gotoandstop.adi.remote.RemoteRequest;
 	
-	import remote.ISocialAPI;
-	import social.ISocialApplication;
-	import social.ISocialGameApplication;
+	import ru.gotoandstop.adi.remote.ISocialAPI;
+	import ru.gotoandstop.adi.social.ISocialApplication;
+	import ru.gotoandstop.adi.social.ISocialGameApplication;
 	
 	/**
 	 *

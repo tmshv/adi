@@ -9,8 +9,8 @@ package{
 	import ru.gotoandstop.vkontakte.params.VkontakteParams;
 	
 	import vk.APIConnection;
-	import social.ISocialApplication;
-	import social.ISocialGameApplication;
+	import ru.gotoandstop.adi.social.ISocialApplication;
+	import ru.gotoandstop.adi.social.ISocialGameApplication;
 	
 	[SWF(width=700, height=600, backgroundColor=0x000000, frameRate=50)]
 	
